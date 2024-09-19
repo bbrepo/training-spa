@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="100" viewBox="0 0 500 100">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 100px;
+        fill: #f2b81a;
+        font-family: "Source Sans Pro";
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <text id="BYTE_CAMP" data-name="BYTE CAMP" class="cls-1" x="-1" y="85">BYTE CAMP</text>
+  <text id="Lorem_Ipsum" data-name="Lorem Ipsum" class="cls-1" x="126" y="-113">Lorem Ipsum</text>
+</svg>
