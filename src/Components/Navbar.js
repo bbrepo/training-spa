@@ -15,6 +15,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import WorkIcon from "@mui/icons-material/Work";
+import SchoolIcon from "@mui/icons-material/School";
 import { useAuth } from "../context/AuthContext";
 import AuthModal from "./AuthModal";
 
@@ -48,6 +49,11 @@ const Navbar = () => {
       sectionId: "services",
     },
     {
+      text: "Courses & Fees",
+      icon: <SchoolIcon />,
+      sectionId: "courses-fees",
+    },
+    {
       text: "Testimonials",
       icon: <CommentRoundedIcon />,
       sectionId: "testimonials",
@@ -67,7 +73,7 @@ const Navbar = () => {
       <div className="navbar-links-container">
         <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a>
         <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a>
-        <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Courses & Fees</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('courses-fees'); }}>Courses & Fees</a>
         <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Testimonials</a>
         <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact us</a>
       </div>

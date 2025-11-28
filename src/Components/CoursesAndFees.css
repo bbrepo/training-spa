@@ -1,0 +1,285 @@
+/* Courses and Fees Section */
+.courses-fees-section {
+  margin-top: 15rem;
+}
+
+.courses-fees-container {
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+.courses-fees-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.courses-fees-header .primary-subheading {
+  font-weight: 700;
+  color: #fe9e0d;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.courses-fees-header h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #4c4c4c;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+.courses-fees-header p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 600px;
+  color: #6a6a6a;
+  margin: 0 auto;
+}
+
+.courses-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.course-card {
+  width: 320px;
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.course-card.popular {
+  border-color: #fe9e0d;
+  transform: scale(1.05);
+}
+
+.course-card.popular:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  background-color: #fe9e0d;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5rem;
+  box-shadow: 0 4px 12px rgba(254, 158, 13, 0.3);
+}
+
+.course-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.course-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  background-color: #fe9e0d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.course-card:hover .course-icon {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(254, 158, 13, 0.3);
+}
+
+.course-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4c4c4c;
+  margin-bottom: 0.5rem;
+}
+
+.course-subtitle {
+  font-size: 0.95rem;
+  color: #6a6a6a;
+  margin-bottom: 1.5rem;
+}
+
+.course-price {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.price-amount {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4c4c4c;
+  line-height: 1;
+}
+
+.price-currency {
+  font-size: 1.8rem;
+  vertical-align: super;
+}
+
+.price-period {
+  font-size: 0.95rem;
+  color: #6a6a6a;
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.course-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex: 1;
+}
+
+.course-features li {
+  padding: 0.75rem 0;
+  color: #505050;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.5;
+}
+
+.feature-icon {
+  color: #fe9e0d;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.enroll-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #fe9e0d;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.enroll-button:hover {
+  background-color: #e48f0f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(254, 158, 13, 0.3);
+}
+
+.enroll-button:active {
+  transform: translateY(0);
+}
+
+.enroll-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .courses-fees-section {
+    margin-top: 8rem;
+  }
+  
+  .courses-grid {
+    gap: 1.5rem;
+  }
+  
+  .course-card {
+    width: 300px;
+  }
+  
+  .course-card.popular {
+    transform: scale(1);
+  }
+  
+  .course-card.popular:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 800px) {
+  .courses-fees-section {
+    margin-top: 5rem;
+  }
+  
+  .courses-fees-header {
+    margin-bottom: 3rem;
+  }
+  
+  .courses-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .course-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .course-card.popular {
+    transform: none;
+  }
+  
+  .popular-badge {
+    right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .course-card {
+    padding: 1.5rem;
+  }
+  
+  .course-title {
+    font-size: 1.4rem;
+  }
+  
+  .price-amount {
+    font-size: 2.5rem;
+  }
+  
+  .enroll-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .popular-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
