@@ -26,7 +26,11 @@ const authMiddleware = (req, res, next) => {
       });
     }
 
-    // Add user info to request
+    // Add user info to request object
+    req.user = {
+      id: decoded.userId,
+      email: decoded.email,
+    };
     req.userId = decoded.userId;
     req.userEmail = decoded.email;
 
@@ -39,4 +43,6 @@ const authMiddleware = (req, res, next) => {
   }
 };
 
+// Export as both default and named export
 module.exports = authMiddleware;
+module.exports.protect = authMiddleware;

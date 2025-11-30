@@ -18,5 +18,23 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  enrollments CourseEnrollment[]
+
   @@map("users")
+}
+
+model CourseEnrollment {
+  id              Int      @id @default(autoincrement())
+  userId          Int
+  courseId        String   // "beginner", "professional", "expert"
+  courseName      String   // "Beginner Course", "Professional Course", "Expert Course"
+  stripeSessionId String   @unique
+  stripePaymentId String?
+  amount          Int      // Amount in cents (e.g., 4900 for $49)
+  status          String   @default("pending") // pending, completed, failed
+  purchasedAt     DateTime @default(now())
+  
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@map("course_enrollments")
 }
